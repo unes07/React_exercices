@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './die.css';
 
 class Die extends Component {
     render() { 
         return ( 
-            <div>
-                <i className={`fas fa-dice-${this.props.face}`}></i>
-            </div>
+                <i className={`Die fas fa-dice-${this.props.face} 
+                    ${this.props.isRolling && 'shaking'}
+                `}></i>
          );
     }
 }
